@@ -1,0 +1,24 @@
+version: '3'
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: cooplay
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - test
+  keydb:
+    image: docker.io/eqalpha/keydb:latest
+    networks:
+      - test
+    ports:
+      - "6379:6379"
+
+networks:
+  test:
+    driver: bridge

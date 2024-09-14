@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "redis-practice"
+version = "0.1.0"
+description = ""
+authors = ["Renat Yakublevich <merlinincorp@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+aiohttp = "^3.10.5"
+beautifulsoup4 = "^4.12.3"
+lxml = "^5.3.0"
+redis = "^5.0.8"
+sqlalchemy = "^2.0.34"
+asyncpg = "^0.29.0"
+greenlet = "^3.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
